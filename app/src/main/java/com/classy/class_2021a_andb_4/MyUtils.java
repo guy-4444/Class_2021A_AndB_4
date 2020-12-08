@@ -26,7 +26,7 @@ import java.net.InetAddress;
 public class MyUtils {
 
     public static void sendAttachedMail(Context activityContext, String filePath, String textToMail) {
-        File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "AppFiles");
+        File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "MyFiles" + File.separator + "CSVs");
         boolean success = false;
         if (!folder.exists()) {
             success = folder.mkdirs();

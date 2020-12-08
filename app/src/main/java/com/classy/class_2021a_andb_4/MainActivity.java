@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void writeToCsv(String fileName, ArrayList<Shift> shifts) {
-        File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "AppFiles");
+        File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "MyFiles" + File.separator + "CSVs");
         boolean success = false;
         if (!folder.exists()) {
             success = folder.mkdirs();
         }
-        //File dir = new File(getExternalFilesDir(null) + File.separator + "AppFiles");
+
         File file = new File(folder.getPath() + File.separator + fileName + ".csv");
 
 
